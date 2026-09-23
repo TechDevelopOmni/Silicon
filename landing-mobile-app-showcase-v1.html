@@ -29,6 +29,7 @@
     <!-- Vendor Styles -->
     <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/img-comparison-slider/dist/styles.css">
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
@@ -258,37 +259,44 @@
 
 
       <!-- Hero -->
-      <section class="overflow-hidden pt-5" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);">
-        <div class="container pt-3 pt-sm-4 pt-xl-5">
-          <div class="row pt-md-2 pt-lg-5">
-            <div class="col-md-5 d-flex flex-column mt-md-4 pt-5 pb-3 pb-sm-4 py-md-5">
-              <h1 class="display-4 text-center text-md-start mb-4">Antecipe recebíveis com risco sacado</h1>
-              <p class="fs-lg text-center text-md-start pb-2 pb-md-3 mb-4 mb-lg-5">O FinanceHub ajuda fornecedores a visualizar títulos elegíveis, simular antecipações e acompanhar operações vinculadas a empresas compradoras.</p>
-              <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start">
-                <a href="#subscribe" class="btn btn-primary btn-lg px-4 py-2 me-sm-3 me-lg-4 mb-3" data-scroll data-scroll-offset="120">
-                  Solicitar acesso
-                </a>
-                <a href="#how-it-works" class="btn btn-outline-primary btn-lg px-4 py-2 mb-3" data-scroll data-scroll-offset="120">
-                  Ver como funciona
-                </a>
-              </div>
-              <div class="position-relative d-inline-flex align-items-center justify-content-center justify-content-md-start mt-auto pt-3 pt-md-4 pb-xl-2">
-                <a href="#features" class="btn btn-icon btn-light bg-white stretched-link rounded-circle me-3" data-scroll data-scroll-offset="120" aria-label="Ver mais">
-                  <i class="bx bx-chevron-down"></i>
-                </a>
-                <span class="fs-sm">Conheça a operação</span>
-              </div>     
-            </div>
-            <div class="col-md-7 align-self-end">
-              <div class="position-relative overflow-hidden mt-4 pb-3 pt-4 mx-auto me-md-0" style="max-width: 632px;">
-                <div class="ratio ratio-1x1"></div>
-                <img src="assets/img/landing/app-showcase-1/hero-phone-1.png" class="rellax position-absolute top-0 start-0 zindex-2"  data-rellax-speed="1.6" data-disable-parallax-down="md" alt="Tela do FinanceHub">
-                <img src="assets/img/landing/app-showcase-1/hero-phone-2.png" class="rellax position-absolute top-0 start-0"  data-rellax-speed="2.8" data-disable-parallax-down="md" alt="Tela do FinanceHub">
+      <section class="position-relative overflow-hidden">
+        <div class="position-relative bg-dark zindex-4 pt-lg-3 pt-xl-5">
+
+          <!-- Text -->
+          <div class="container zindex-5 pt-5">
+            <div class="row justify-content-center text-center pt-4 pb-sm-2 py-lg-5">
+              <div class="col-xl-8 col-lg-9 col-md-10 py-5">
+                <h1 class="display-4 text-light pt-sm-2 pb-1 pb-sm-3 mb-3">Sua Plataforma Financeira Completa e inteligente</h1>
+                <p class="fs-lg text-light opacity-70 pb-2 pb-sm-0 mb-4 mb-sm-5">We offer you a new generation of task and project management system. Plan, manage and track all your tasks in one flexible software!</p>
+                <a href="#" class="btn btn-primary shadow-primary btn-lg">Get early access</a>
               </div>
             </div>
           </div>
+
+          <!-- Bottom shape -->
+          <div class="d-flex position-absolute top-100 start-0 w-100 overflow-hidden mt-n4 mt-sm-n1" style="color: var(--si-dark);">
+            <div class="position-relative start-50 translate-middle-x flex-shrink-0" style="width: 3788px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="3788" height="144" viewBox="0 0 3788 144"><path fill="currentColor" d="M0,0h3788.7c-525,90.2-1181.7,143.9-1894.3,143.9S525,90.2,0,0z"/></svg>
+            </div>
+          </div>
+          <div class="d-none d-lg-block" style="height: 300px;"></div>
+          <div class="d-none d-md-block d-lg-none" style="height: 150px;"></div>
         </div>
+        <div class="position-relative zindex-5 mx-auto" style="max-width: 1250px; transform: translateZ(-100px);">
+          <div class="d-none d-lg-block" style="margin-top: -300px;"></div>
+          <div class="d-none d-md-block d-lg-none" style="margin-top: -150px;"></div>
+
+          <!-- Parallax (3D Tilt) gfx -->
+          <div class="tilt-3d" data-tilt data-tilt-full-page-listening data-tilt-max="12" data-tilt-perspective="1200">
+            <img src="assets/img/daytrade/principal.png" alt="Dashboard">
+            <div class="tilt-3d-inner position-absolute top-0 start-0 w-100 h-100">
+              <img src="assets/img/daytrade/prin.png" alt="Cards">
+            </div>
+          </div>
+        </div>
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></div>
       </section>
+
 
 
       <!-- Brands (carousel on screens < 1100px) -->
@@ -988,8 +996,10 @@
 
 
     <!-- Vendor Scripts -->
+    <script src="assets/vendor/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
     <script src="assets/vendor/rellax/rellax.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/img-comparison-slider/dist/index.js"></script>
 
     <!-- FinanceHub feature showcase interaction -->
     <script>
