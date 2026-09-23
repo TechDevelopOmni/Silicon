@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="pt-BR" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>Silicon | Mobile App Showcase Landing v.1</title>
+    <title>FinanceHub | Risco sacado para fornecedores</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Silicon - Multipurpose Technology Bootstrap Template">
-    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
-    <meta name="author" content="Createx Studio">
+    <meta name="description" content="FinanceHub conecta fornecedores a oportunidades de risco sacado para antecipar recebíveis de empresas compradoras com clareza e acompanhamento.">
+    <meta name="keywords" content="FinanceHub, risco sacado, fornecedores, antecipação de recebíveis, títulos elegíveis, supply chain finance, capital de giro">
+    <meta name="author" content="FinanceHub">
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -110,6 +110,65 @@
           transform: rotate(360deg);
         }
       }
+      .financehub-feature-showcase {
+        --fh-shift-x: 0px;
+        --fh-shift-y: 0px;
+        max-width: 560px;
+        padding: 2rem 0 3.5rem;
+        margin-top: 7rem;
+        margin-left: -3.5rem;
+        animation: financehub-showcase-float 6.5s ease-in-out infinite;
+        will-change: transform;
+      }
+      .financehub-feature-main,
+      .financehub-feature-overlay {
+        display: block;
+        width: 100%;
+        border: 1px solid rgba(180, 183, 201, .32);
+        background-color: #fff;
+        box-shadow: 0 1.75rem 4.5rem rgba(14, 24, 54, .18);
+        transition: transform .24s ease-out, box-shadow .24s ease-out;
+        will-change: transform;
+      }
+      .financehub-feature-main {
+        border-radius: 1rem;
+      }
+      .financehub-feature-overlay {
+        position: absolute;
+        top: 21.75%;
+        left: 17.65%;
+        z-index: 2;
+        width: 82.5%;
+        border-radius: .75rem;
+        box-shadow: 0 1.5rem 3.5rem rgba(14, 24, 54, .24);
+        transform: translate3d(var(--fh-shift-x), calc(.45rem + var(--fh-shift-y)), 0);
+      }
+      .financehub-feature-showcase:hover .financehub-feature-main,
+      .financehub-feature-showcase:hover .financehub-feature-overlay {
+        box-shadow: 0 2.25rem 5.75rem rgba(14, 24, 54, .24);
+      }
+      [data-bs-theme="dark"] .financehub-feature-main,
+      [data-bs-theme="dark"] .financehub-feature-overlay {
+        border-color: rgba(255, 255, 255, .14);
+        box-shadow: 0 1.25rem 3.5rem rgba(0, 0, 0, .35);
+      }
+      @keyframes financehub-showcase-float {
+        0%, 100% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(0, -10px, 0);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .financehub-feature-showcase {
+          animation: none;
+        }
+        .financehub-feature-main,
+        .financehub-feature-overlay {
+          transition: none;
+        }
+      }
     </style>
 
     <!-- Page loading scripts -->
@@ -128,7 +187,7 @@
 
 
   <!-- Body -->
-  <body>
+  <body id="top">
 
     <!-- Page loading spinner -->
     <div class="page-loading active">
@@ -147,9 +206,9 @@
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
       <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
         <div class="container px-3">
-          <a href="index.html" class="navbar-brand pe-3">
-            <img src="assets/img/logo.svg" width="47" alt="Silicon">
-            Silicon
+          <a href="#top" class="navbar-brand pe-3" data-scroll data-scroll-offset="120">
+            <img src="assets/img/logo/image.png" width="47" alt="FinanceHub">
+            FinanceHub
           </a>
           <div id="navbarNav" class="offcanvas offcanvas-end">
             <div class="offcanvas-header border-bottom">
@@ -158,144 +217,41 @@
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-current="page">Landings</a>
-                  <div class="dropdown-menu p-0">
-                    <div class="d-lg-flex">
-                      <div class="mega-dropdown-column d-flex justify-content-center align-items-center rounded-3 rounded-end-0 px-0" style="margin: -1px; background-color: #f3f6ff;">
-                        <img src="assets/img/landings.jpg" alt="Landings">
-                      </div>
-                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4" style="--si-mega-dropdown-column-width: 15rem;">
-                        <ul class="list-unstyled mb-0">
-                          <li><a href="index.html" class="dropdown-item">Template Intro Page</a></li>
-                          <li><a href="landing-mobile-app-showcase-v1.html" class="dropdown-item">Mobile App Showcase v.1</a></li>
-                          <li><a href="landing-mobile-app-showcase-v2.html" class="dropdown-item">Mobile App Showcase v.2</a></li>
-                          <li><a href="landing-mobile-app-showcase-v3.html" class="dropdown-item">Mobile App Showcase v.3<span class="badge bg-success ms-2">New</span></a></li>
-                          <li><a href="landing-product.html" class="dropdown-item d-flex align-items-center">Product Landing</a></li>
-                          <li><a href="landing-saas-v1.html" class="dropdown-item">SaaS v.1</a></li>
-                          <li><a href="landing-saas-v2.html" class="dropdown-item">SaaS v.2</a></li>
-                          <li><a href="landing-saas-v3.html" class="dropdown-item">SaaS v.3</a></li>
-                          <li><a href="landing-saas-v4.html" class="dropdown-item">SaaS v.4</a></li>
-                          <li><a href="landing-saas-v5.html" class="dropdown-item">SaaS v.5<span class="badge bg-success ms-2">New</span></a></li>
-                        </ul>
-                      </div>
-                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
-                        <ul class="list-unstyled mb-0">
-                          <li><a href="landing-startup.html" class="dropdown-item d-flex align-items-center">Startup</a></li>
-                          <li><a href="landing-financial.html" class="dropdown-item">Financial Consulting</a></li>
-                          <li><a href="landing-online-courses.html" class="dropdown-item">Online Courses</a></li>
-                          <li><a href="landing-medical.html" class="dropdown-item">Medical</a></li>
-                          <li><a href="landing-software-dev-agency-v1.html" class="dropdown-item">Software Dev Agency v.1</a></li>
-                          <li><a href="landing-software-dev-agency-v2.html" class="dropdown-item">Software Dev Agency v.2</a></li>
-                          <li><a href="landing-software-dev-agency-v3.html" class="dropdown-item">Software Dev Agency v.3</a></li>
-                          <li><a href="landing-conference.html" class="dropdown-item">Conference</a></li>
-                          <li><a href="landing-digital-agency.html" class="dropdown-item">Digital Agency</a></li>
-                          <li><a href="landing-blog.html" class="dropdown-item">Blog Homepage</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                  <div class="dropdown-menu">
-                    <div class="d-lg-flex pt-lg-3">
-                      <div class="mega-dropdown-column">
-                        <h6 class="px-3 mb-2">About</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="about-v1.html" class="dropdown-item py-1">About v.1</a></li>
-                          <li><a href="about-v2.html" class="dropdown-item py-1">About v.2</a></li>
-                          <li><a href="about-v3.html" class="dropdown-item py-1">About v.3</a></li>
-                        </ul>
-                        <h6 class="px-3 mb-2">Blog</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="blog-list-with-sidebar.html" class="dropdown-item py-1">List View with Sidebar</a></li>
-                          <li><a href="blog-grid-with-sidebar.html" class="dropdown-item py-1">Grid View with Sidebar</a></li>
-                          <li><a href="blog-list-no-sidebar.html" class="dropdown-item py-1">List View no Sidebar</a></li>
-                          <li><a href="blog-grid-no-sidebar.html" class="dropdown-item py-1">Grid View no Sidebar</a></li>
-                          <li><a href="blog-simple-feed.html" class="dropdown-item py-1">Simple Feed</a></li>
-                          <li><a href="blog-single.html" class="dropdown-item py-1">Single Post</a></li>
-                          <li><a href="blog-podcast.html" class="dropdown-item py-1">Podcast</a></li>
-                        </ul>
-                      </div>
-                      <div class="mega-dropdown-column">
-                        <h6 class="px-3 mb-2">Portfolio</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="portfolio-grid.html" class="dropdown-item py-1">Grid View</a></li>
-                          <li><a href="portfolio-list.html" class="dropdown-item py-1">List View</a></li>
-                          <li><a href="portfolio-slider.html" class="dropdown-item py-1">Slider View</a></li>
-                          <li><a href="portfolio-courses.html" class="dropdown-item py-1">Courses</a></li>
-                          <li><a href="portfolio-single-project.html" class="dropdown-item py-1">Single Project</a></li>
-                          <li><a href="portfolio-single-course.html" class="dropdown-item py-1">Single Course</a></li>
-                        </ul>
-                        <h6 class="px-3 mb-2">Services</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="services-v1.html" class="dropdown-item py-1">Services v.1</a></li>
-                          <li><a href="services-v2.html" class="dropdown-item py-1">Services v.2</a></li>
-                          <li><a href="services-single-v1.html" class="dropdown-item py-1">Service Details v.1</a></li>
-                          <li><a href="services-single-v2.html" class="dropdown-item py-1">Service Details v.2</a></li>
-                        </ul>
-                      </div>
-                      <div class="mega-dropdown-column">
-                        <h6 class="px-3 mb-2">Pricing</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="pricing.html" class="dropdown-item py-1">Pricing Page</a></li>
-                        </ul>
-                        <h6 class="px-3 mb-2">Contacts</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="contacts-v1.html" class="dropdown-item py-1">Contacts v.1</a></li>
-                          <li><a href="contacts-v2.html" class="dropdown-item py-1">Contacts v.2</a></li>
-                          <li><a href="contacts-v3.html" class="dropdown-item py-1">Contacts v.3</a></li>
-                        </ul>
-                        <h6 class="px-3 mb-2">Specialty</h6>
-                        <ul class="list-unstyled">
-                          <li><a href="404-v1.html" class="dropdown-item py-1">404 Error v.1</a></li>
-                          <li><a href="404-v2.html" class="dropdown-item py-1">404 Error v.2</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="account-details.html" class="dropdown-item">Account Details</a></li>
-                    <li><a href="account-security.html" class="dropdown-item">Security</a></li>
-                    <li><a href="account-notifications.html" class="dropdown-item">Notifications</a></li>
-                    <li><a href="account-messages.html" class="dropdown-item">Messages</a></li>
-                    <li><a href="account-saved-items.html" class="dropdown-item">Saved Items</a></li>
-                    <li><a href="account-collections.html" class="dropdown-item">My Collections</a></li>
-                    <li><a href="account-payment.html" class="dropdown-item">Payment Details</a></li>
-                    <li><a href="account-signin.html" class="dropdown-item">Sign In</a></li>
-                    <li><a href="account-signup.html" class="dropdown-item">Sign Up</a></li>
-                  </ul>
+                <li class="nav-item">
+                  <a href="#features" class="nav-link active" data-scroll data-scroll-offset="120" aria-current="page">Recursos</a>
                 </li>
                 <li class="nav-item">
-                  <a href="components/typography.html" class="nav-link">UI Kit</a>
+                  <a href="#how-it-works" class="nav-link" data-scroll data-scroll-offset="120">Como funciona</a>
                 </li>
                 <li class="nav-item">
-                  <a href="docs/getting-started.html" class="nav-link">Docs</a>
+                  <a href="#benefits" class="nav-link" data-scroll data-scroll-offset="120">Benefícios</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#testimonials" class="nav-link" data-scroll data-scroll-offset="120">Operação</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#faq-section" class="nav-link" data-scroll data-scroll-offset="120">FAQ</a>
                 </li>
               </ul>
             </div>
             <div class="offcanvas-header border-top">
-              <a href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/" class="btn btn-primary w-100" target="_blank" rel="noopener">
-                <i class="bx bx-cart fs-4 lh-1 me-1"></i>
-                &nbsp;Buy now
+              <a href="#subscribe" class="btn btn-primary w-100" data-scroll data-scroll-offset="120">
+                <i class="bx bx-message-rounded-dots fs-4 lh-1 me-1"></i>
+                &nbsp;Solicitar acesso
               </a>
             </div>      
           </div>
           <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
             <input type="checkbox" class="form-check-input" id="theme-mode">
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Claro</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Escuro</label>
           </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
-            <i class="bx bx-cart fs-5 lh-1 me-1"></i>
-            &nbsp;Buy now
+          <a href="#subscribe" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" data-scroll data-scroll-offset="120">
+            <i class="bx bx-message-rounded-dots fs-5 lh-1 me-1"></i>
+            &nbsp;Solicitar acesso
           </a>
         </div>
       </header>
@@ -306,30 +262,28 @@
         <div class="container pt-3 pt-sm-4 pt-xl-5">
           <div class="row pt-md-2 pt-lg-5">
             <div class="col-md-5 d-flex flex-column mt-md-4 pt-5 pb-3 pb-sm-4 py-md-5">
-              <h1 class="display-4 text-center text-md-start mb-4">Manage All Your Money in One App</h1>
-              <p class="fs-lg text-center text-md-start pb-2 pb-md-3 mb-4 mb-lg-5">We offer you a new generation of the mobile banking.<br>Save, spend &amp; manage money in your pocket.</p>
+              <h1 class="display-4 text-center text-md-start mb-4">Antecipe recebíveis com risco sacado</h1>
+              <p class="fs-lg text-center text-md-start pb-2 pb-md-3 mb-4 mb-lg-5">O FinanceHub ajuda fornecedores a visualizar títulos elegíveis, simular antecipações e acompanhar operações vinculadas a empresas compradoras.</p>
               <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start">
-                <a href="#" class="btn btn-dark btn-lg px-3 py-2 me-sm-3 me-lg-4 mb-3">
-                  <img src="assets/img/market/appstore-light.svg" class="light-mode-img" width="124" alt="App Store">
-                  <img src="assets/img/market/appstore-dark.svg" class="dark-mode-img" width="124" alt="App Store">
+                <a href="#subscribe" class="btn btn-primary btn-lg px-4 py-2 me-sm-3 me-lg-4 mb-3" data-scroll data-scroll-offset="120">
+                  Solicitar acesso
                 </a>
-                <a href="#" class="btn btn-dark btn-lg px-3 py-2 mb-3">
-                  <img src="assets/img/market/googleplay-light.svg" class="light-mode-img" width="139" alt="Google Play">
-                  <img src="assets/img/market/googleplay-dark.svg" class="dark-mode-img" width="139" alt="Google Play">
+                <a href="#how-it-works" class="btn btn-outline-primary btn-lg px-4 py-2 mb-3" data-scroll data-scroll-offset="120">
+                  Ver como funciona
                 </a>
               </div>
               <div class="position-relative d-inline-flex align-items-center justify-content-center justify-content-md-start mt-auto pt-3 pt-md-4 pb-xl-2">
-                <a href="#features" class="btn btn-icon btn-light bg-white stretched-link rounded-circle me-3" data-scroll data-scroll-offset="120" aria-label="Scroll for more">
+                <a href="#features" class="btn btn-icon btn-light bg-white stretched-link rounded-circle me-3" data-scroll data-scroll-offset="120" aria-label="Ver mais">
                   <i class="bx bx-chevron-down"></i>
                 </a>
-                <span class="fs-sm">Discover more</span>
+                <span class="fs-sm">Conheça a operação</span>
               </div>     
             </div>
             <div class="col-md-7 align-self-end">
               <div class="position-relative overflow-hidden mt-4 pb-3 pt-4 mx-auto me-md-0" style="max-width: 632px;">
                 <div class="ratio ratio-1x1"></div>
-                <img src="assets/img/landing/app-showcase-1/hero-phone-1.png" class="rellax position-absolute top-0 start-0 zindex-2"  data-rellax-speed="1.6" data-disable-parallax-down="md" alt="Phone">
-                <img src="assets/img/landing/app-showcase-1/hero-phone-2.png" class="rellax position-absolute top-0 start-0"  data-rellax-speed="2.8" data-disable-parallax-down="md" alt="Phone">
+                <img src="assets/img/landing/app-showcase-1/hero-phone-1.png" class="rellax position-absolute top-0 start-0 zindex-2"  data-rellax-speed="1.6" data-disable-parallax-down="md" alt="Tela do FinanceHub">
+                <img src="assets/img/landing/app-showcase-1/hero-phone-2.png" class="rellax position-absolute top-0 start-0"  data-rellax-speed="2.8" data-disable-parallax-down="md" alt="Tela do FinanceHub">
               </div>
             </div>
           </div>
@@ -369,42 +323,42 @@
             <!-- Item -->
             <div class="swiper-slide py-3">
               <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/01.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                <img src="assets/img/landing/app-showcase-1/screens/image.png" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
               </a>
             </div>
 
             <!-- Item -->
             <div class="swiper-slide py-3">
               <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/02.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                <img src="assets/img/brands/02.svg" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
               </a>
             </div>
 
             <!-- Item -->
             <div class="swiper-slide py-3">
               <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/03.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                <img src="assets/img/brands/03.svg" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
               </a>
             </div>
 
             <!-- Item -->
             <div class="swiper-slide py-3">
               <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/04.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                <img src="assets/img/brands/04.svg" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
               </a>
             </div>
 
             <!-- Item -->
             <div class="swiper-slide py-3">
               <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/05.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                <img src="assets/img/brands/05.svg" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
               </a>
             </div>
 
             <!-- Item -->
             <div class="swiper-slide py-3">
               <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/06.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+                <img src="assets/img/brands/06.svg" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
               </a>
             </div>
           </div>
@@ -415,24 +369,24 @@
       </section>
 
 
-      <!-- Features -->
+      <!-- Recursos -->
       <section id="features" class="container pt-lg-2 pt-xl-3 pb-3 pb-xl-5 mt-n2 mt-sm-0 mb-2 mb-md-4 mb-lg-5">
         <div class="row pb-xl-3">
 
           <!-- Parallax gfx -->
           <div class="col-lg-5 d-none d-lg-block">
-            <div class="position-relative" style="max-width: 348px;">
-              <img src="assets/img/landing/app-showcase-1/features/phone.png" alt="Phone">
-              <div class="rellax position-absolute top-0" data-rellax-vertical-scroll-axis="x" data-rellax-horizontal-speed="0.75" data-disable-parallax-down="lg" style="max-width: 348px; right: -2.75rem;">
-                <img src="assets/img/landing/app-showcase-1/features/card.png" alt="Card">
+            <div class="financehub-feature-showcase position-relative">
+              <img src="assets/img/landing/app-showcase-1/features/Frame 1000015943.png" class="financehub-feature-main" alt="Dashboard do FinanceHub">
+              <div class="rellax position-absolute top-0 start-0 w-100 h-100" data-rellax-vertical-scroll-axis="x" data-rellax-horizontal-speed="0.75" data-disable-parallax-down="lg">
+                <img src="assets/img/landing/app-showcase-1/features/financehub-summary-cards.png" class="financehub-feature-overlay" alt="Indicadores financeiros do FinanceHub">
               </div>
             </div>
           </div>
 
-          <!-- Feature list -->
-          <div class="col-lg-7">
-            <h2 class="h1 text-center text-md-start mb-4">App Features</h2>
-            <p class="fs-lg text-muted text-center text-md-start mb-4 mb-xl-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+        <!-- Feature list -->
+        <div class="col-lg-7">
+          <h2 class="h1 text-center text-md-start mb-4">Risco sacado com clareza para fornecedores</h2>
+          <p class="fs-lg text-muted text-center text-md-start mb-4 mb-xl-5">O FinanceHub organiza títulos a receber de empresas compradoras e mostra quais podem ser antecipados, com informações de prazo, valor e status em um único ambiente.</p>
             <div class="row row-cols-1 row-cols-sm-2 pt-2 pt-sm-3 pt-xl-2">
 
               <!-- Item -->
@@ -440,78 +394,78 @@
                 <div class="d-flex align-items-start pe-xl-3">
                   <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
                     <img src="assets/img/landing/app-showcase-1/features/payments.svg" alt="Icon">
-                  </div>
-                  <div class="ps-4 ps-sm-3 ps-md-4">
-                    <h3 class="h5 pb-1 mb-2">Easy Payments</h3>
-                    <p class="mb-0">Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
-                  </div>
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Títulos elegíveis</h3>
+                  <p class="mb-0">Veja quais recebíveis vinculados a empresas compradoras estão disponíveis para risco sacado.</p>
                 </div>
               </div>
+            </div>
 
               <!-- Item -->
               <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
                 <div class="d-flex align-items-start ps-xl-3">
                   <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
                     <img src="assets/img/landing/app-showcase-1/features/security.svg" alt="Icon">
-                  </div>
-                  <div class="ps-4 ps-sm-3 ps-md-4">
-                    <h3 class="h5 pb-1 mb-2">Data Security</h3>
-                    <p class="mb-0">Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
-                  </div>
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Operação segura</h3>
+                  <p class="mb-0">Acompanhe dados sensíveis da operação com acesso controlado e informações bem organizadas.</p>
                 </div>
               </div>
+            </div>
 
               <!-- Item -->
               <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
                 <div class="d-flex align-items-start pe-xl-3">
                   <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
                     <img src="assets/img/landing/app-showcase-1/features/statistics.svg" alt="Icon">
-                  </div>
-                  <div class="ps-4 ps-sm-3 ps-md-4">
-                    <h3 class="h5 pb-1 mb-2">Cost Statistics</h3>
-                    <p class="mb-0">Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
-                  </div>
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Visão por vencimento</h3>
+                  <p class="mb-0">Entenda prazos, valores e status dos títulos para decidir quando antecipar.</p>
                 </div>
               </div>
+            </div>
 
               <!-- Item -->
               <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
                 <div class="d-flex align-items-start ps-xl-3">
                   <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
                     <img src="assets/img/landing/app-showcase-1/features/support.svg" alt="Icon">
-                  </div>
-                  <div class="ps-4 ps-sm-3 ps-md-4">
-                    <h3 class="h5 pb-1 mb-2">Support 24/7</h3>
-                    <p class="mb-0">A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
-                  </div>
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Acompanhamento de status</h3>
+                  <p class="mb-0">Monitore cada etapa da solicitação, da elegibilidade até a conclusão da operação.</p>
                 </div>
               </div>
+            </div>
 
               <!-- Item -->
               <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
                 <div class="d-flex align-items-start pe-xl-3">
                   <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
                     <img src="assets/img/landing/app-showcase-1/features/cashback.svg" alt="Icon">
-                  </div>
-                  <div class="ps-4 ps-sm-3 ps-md-4">
-                    <h3 class="h5 pb-1 mb-2">Regular Cashback</h3>
-                    <p class="mb-0">Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
-                  </div>
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Previsibilidade de caixa</h3>
+                  <p class="mb-0">Transforme recebíveis futuros em uma visão clara de capital disponível para a operação.</p>
                 </div>
               </div>
+            </div>
 
               <!-- Item -->
               <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
                 <div class="d-flex align-items-start ps-xl-3">
                   <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
                     <img src="assets/img/landing/app-showcase-1/features/happy.svg" alt="Icon">
-                  </div>
-                  <div class="ps-4 ps-sm-3 ps-md-4">
-                    <h3 class="h5 pb-1 mb-2">Top Standards</h3>
-                    <p class="mb-0">Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
-                  </div>
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Suporte operacional</h3>
+                  <p class="mb-0">Conte com apoio para entender a elegibilidade, selecionar títulos e acompanhar a liquidação.</p>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -519,16 +473,16 @@
 
 
       <!-- How it works (Slider) -->
-      <section class="position-relative bg-secondary py-5">
+      <section id="how-it-works" class="position-relative bg-secondary py-5">
         <div class="container mt-3 pt-md-2 pt-lg-4 pb-2 pb-md-4 pb-lg-5">
-          <h2 class="h1 text-center pb-2 pb-md-0 mb-4 mb-md-5">How Does It Work?</h2>
+          <h2 class="h1 text-center pb-2 pb-md-0 mb-4 mb-md-5">Como funciona o risco sacado?</h2>
           <div class="position-relative mx-5">
 
             <!-- Slider prev/next buttons -->
-            <button type="button" id="prev-screen" class="btn btn-prev btn-icon position-absolute top-50 start-0 ms-n5 translate-middle-y" aria-label="Previous">
+            <button type="button" id="prev-screen" class="btn btn-prev btn-icon position-absolute top-50 start-0 ms-n5 translate-middle-y" aria-label="Anterior">
               <i class="bx bx-chevron-left"></i>
             </button>
-            <button type="button" id="next-screen" class="btn btn-next btn-icon position-absolute top-50 end-0 me-n5 translate-middle-y" aria-label="Next">
+            <button type="button" id="next-screen" class="btn btn-next btn-icon position-absolute top-50 end-0 me-n5 translate-middle-y" aria-label="Próximo">
               <i class="bx bx-chevron-right"></i>
             </button>
 
@@ -564,24 +518,18 @@
 
                 <!-- Item -->
                 <div class="swiper-slide" data-swiper-tab="#text-1">
-                  <img src="assets/img/landing/app-showcase-1/screens/01.png" class="d-block mx-auto" width="328" alt="Screen">
+                  <img src="assets/img/landing/app-showcase-1/screens/financehub-step-1.png" class="d-block mx-auto" width="328" alt="Dashboard do FinanceHub">
                 </div>
 
                 <!-- Item -->
                 <div class="swiper-slide" data-swiper-tab="#text-2">
-                  <img src="assets/img/landing/app-showcase-1/screens/02.png" class="d-block mx-auto" width="328" alt="Screen">
+                  <img src="assets/img/landing/app-showcase-1/screens/financehub-step-2.png" class="d-block mx-auto" width="328" alt="Contas a pagar no FinanceHub">
                 </div>
 
                 <!-- Item -->
                 <div class="swiper-slide" data-swiper-tab="#text-3">
-                  <img src="assets/img/landing/app-showcase-1/screens/03.png" class="d-block mx-auto" width="328" alt="Screen">
+                  <img src="assets/img/landing/app-showcase-1/screens/financehub-step-3.png" class="d-block mx-auto" width="328" alt="Ativos elegíveis no FinanceHub">
                 </div>
-
-                <!-- Item -->
-                <div class="swiper-slide" data-swiper-tab="#text-4">
-                  <img src="assets/img/landing/app-showcase-1/screens/04.png" class="d-block mx-auto" width="328" alt="Screen">
-                </div>
-
               </div>
             </div>
           </div>
@@ -592,26 +540,26 @@
 
               <!-- Text 1 -->
               <div id="text-1" class="swiper-tab active">
-                <h3 class="h4 pb-1 mb-2">Step 1. Advanced budget management</h3>
-                <p class="mb-0">Consequat ut cras nisl, enim purus in facilisi. Ipsum amet, lectus malesuada risus sollicitudin accumsan. Id sem elit vel vel lectus risus senectus.</p>
+                <h3 class="h4 pb-1 mb-2">1° Passo. Acesse seus títulos</h3>
+                <p class="mb-0">Consulte os recebíveis vinculados às empresas compradoras cadastradas e visualize a posição da sua operação.</p>
               </div>
 
               <!-- Text 2 -->
               <div id="text-2" class="swiper-tab">
-                <h3 class="h4 pb-1 mb-2">Step 2. Latest transaction history</h3>
-                <p class="mb-0">Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.</p>
+                <h3 class="h4 pb-1 mb-2">2° Passo. Verifique a elegibilidade</h3>
+                <p class="mb-0">Identifique quais títulos estão aptos para risco sacado, com valores, vencimentos e empresa compradora relacionados.</p>
               </div>
 
               <!-- Text 3 -->
               <div id="text-3" class="swiper-tab">
-                <h3 class="h4 pb-1 mb-2">Step 3. Transfers to people from your contact list</h3>
-                <p class="mb-0">Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+                <h3 class="h4 pb-1 mb-2">3° Passo. Escolha os títulos</h3>
+                <p class="mb-0">Selecione os recebíveis que fazem sentido para o seu caixa e acompanhe a solicitação com transparência.</p>
               </div>
 
               <!-- Text 4 -->
               <div id="text-4" class="swiper-tab">
-                <h3 class="h4 pb-1 mb-2">Step 4. Card-to-card transfers</h3>
-                <p class="mb-0">A sed lorem felis, pulvinar pharetra. At tempus, vel sed faucibus amet sit elementum sed erat. Id nunc blandit pharetra facilisis.</p>
+                <h3 class="h4 pb-1 mb-2">4° Passo. Acompanhe a liquidação</h3>
+                <p class="mb-0">Monitore o andamento da operação e tenha mais previsibilidade para planejar pagamentos, compras e produção.</p>
               </div>
             </div>
           </div>
@@ -622,35 +570,32 @@
       </section>
 
 
-      <!-- Fetures -->
-      <section class="container pt-5 pb-2 pb-md-3 py-lg-5">
+      <!-- Benefits -->
+      <section id="benefits" class="container pt-5 pb-2 pb-md-3 py-lg-5">
         <div class="row align-items-center my-3 py-md-3 py-lg-5">
           <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 order-md-2 mb-2 mb-md-0 pb-4 pb-md-0">
             <div class="position-relative mx-auto mx-md-0" style="max-width: 469px;">
-              <img src="assets/img/landing/app-showcase-1/features/screen01.png" class="rellax d-block" alt="Screen" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md">
-              <div class="rellax position-absolute top-0 end-0 w-100 h-100" data-rellax-percentage="0.5" data-rellax-speed="0.75" data-disable-parallax-down="md">
-                <img src="assets/img/landing/app-showcase-1/features/screen02.png" alt="Screen">
-              </div>
+              <img src="assets/img/landing/app-showcase-1/features/screen05.png" class="rellax d-block" alt="Tela de risco sacado" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md">
             </div>
           </div>
           <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1 pb-md-4">
-            <h2 class="pb-3">Make your money transfer simple and clear</h2>
+            <h2 class="pb-3">Antecipe recebíveis sem perder visibilidade</h2>
             <ul class="list-unstyled pb-3 mb-3">
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-check-circle fs-xl text-primary me-2"></i>
-                Banking transactions are free for you
+                Consulte títulos disponíveis para risco sacado em poucos cliques
               </li>
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-check-circle fs-xl text-primary me-2"></i>
-                No monthly cash commission
+                Ganhe previsibilidade antes do vencimento dos recebíveis
               </li>
               <li class="d-flex align-items-center mb-2">
                 <i class="bx bx-check-circle fs-xl text-primary me-2"></i>
-                Manage payments and transactions online
+                Acompanhe solicitações e status em uma única plataforma
               </li>
             </ul>
             <a href="#" class="btn btn-primary">
-              Learn more
+              Conhecer benefícios
               <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
             </a>
           </div>
@@ -658,30 +603,30 @@
         <div class="row align-items-center mt-2 mt-md-0 pt-5 pt-md-4 pt-lg-0 pb-md-3 pb-lg-5">
           <div class="col-md-6 col-lg-5 offset-xl-1 mb-2 mb-md-0 pb-4 pb-md-0">
             <div class="position-relative mx-auto mx-md-0" style="max-width: 462px;">
-              <img src="assets/img/landing/app-showcase-1/features/screen03.png" class="rellax d-block" alt="Screen" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md">
+              <img src="assets/img/landing/app-showcase-1/features/screen03.png" class="rellax d-block" alt="Tela de recebíveis elegíveis" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md">
               <div class="rellax position-absolute top-0 end-0 w-100 h-100 me-md-n3" data-rellax-percentage="0.5" data-rellax-speed="0.75" data-disable-parallax-down="md">
-                <img src="assets/img/landing/app-showcase-1/features/screen04.png" alt="Screen">
+                <img src="assets/img/landing/app-showcase-1/features/screen04.png" alt="Tela de acompanhamento da operação">
               </div>
             </div>
           </div>
           <div class="col-md-6 col-xl-5 offset-lg-1">
-            <h2 class="pb-3">Receive payment from international bank details</h2>
+            <h2 class="pb-3">Use seus títulos para fortalecer o caixa</h2>
             <div class="row row-cols-1 row-cols-sm-2 text-start pb-3">
               <div class="col pb-4">
                 <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
-                  <img src="assets/img/landing/app-showcase-1/features/payments.svg" alt="Easy Payments">
+                  <img src="assets/img/landing/app-showcase-1/features/payments.svg" alt="Ativos elegíveis">
                 </div>
-                <p class="mb-0">Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
+                <p class="mb-0">Identifique recebíveis elegíveis junto a empresas compradoras e avalie a antecipação com clareza.</p>
               </div>
               <div class="col pb-4">
                 <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
-                  <img src="assets/img/landing/app-showcase-1/features/cashback.svg" alt="Regular Cashback">
+                  <img src="assets/img/landing/app-showcase-1/features/cashback.svg" alt="Capital de giro">
                 </div>
-                <p class="mb-0">A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
+                <p class="mb-0">Transforme valores a receber em capital para cumprir compromissos e manter a operação fluindo.</p>
               </div>
             </div>
             <a href="#" class="btn btn-primary">
-              Learn more
+              Explorar antecipação
               <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
             </a>
           </div>
@@ -692,18 +637,18 @@
 
 
       <!-- Testimonials -->
-      <section class="py-5 mb-md-2" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);">
+      <section id="testimonials" class="py-5 mb-md-2" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);">
         <div class="container py-lg-4">
           <div class="row py-md-3">
             <div class="col-xl-3 col-lg-4 pt-2">
-              <h2 class="h1 text-center text-lg-start pb-2">Clients are Loving Our App</h2>
+              <h2 class="h1 text-center text-lg-start pb-2">Mais controle para antecipar recebíveis</h2>
               
               <!-- Slider prev/next buttons -->
               <div class="d-flex justify-content-center justify-content-lg-start pt-lg-5">
-                <button type="button" id="prev-review" class="btn btn-prev btn-icon btn-sm me-3" aria-label="Previous">
+                <button type="button" id="prev-review" class="btn btn-prev btn-icon btn-sm me-3" aria-label="Anterior">
                   <i class="bx bx-chevron-left"></i>
                 </button>
-                <button type="button" id="next-review" class="btn btn-next btn-icon btn-sm" aria-label="Next">
+                <button type="button" id="next-review" class="btn btn-next btn-icon btn-sm" aria-label="Próximo">
                   <i class="bx bx-chevron-right"></i>
                 </button>
               </div>
@@ -739,13 +684,13 @@
                               <i class="bx bx-star text-muted opacity-75"></i>
                               <i class="bx bx-star text-muted opacity-75"></i>
                             </div>
-                            <p class="fs-lg mb-0">Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
+                            <p class="fs-lg mb-0">A plataforma reduz a incerteza do fornecedor ao mostrar quais títulos estão disponíveis para risco sacado e quais etapas ainda precisam ser acompanhadas.</p>
                           </blockquote>
                           <div class="card-footer d-flex align-items-center border-0 pt-0">
-                            <img src="assets/img/avatar/42.png" width="48" class="rounded-circle ms-n1" alt="Fannie Summers">
+                            <img src="assets/img/avatar/42.png" width="48" class="rounded-circle ms-n1" alt="Operação financeira">
                             <div class="ps-2 ms-1">
-                              <h6 class="fs-base fw-semibold mb-0">Fannie Summers</h6>
-                              <span class="fs-sm text-muted">Designer</span>
+                              <h6 class="fs-base fw-semibold mb-0">Operação financeira</h6>
+                              <span class="fs-sm text-muted">Fornecedor</span>
                             </div>
                           </div>
                         </div>
@@ -767,13 +712,13 @@
                               <i class="bx bxs-star text-warning"></i>
                               <i class="bx bxs-star text-warning"></i>
                             </div>
-                            <p class="fs-lg mb-0">Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
+                            <p class="fs-lg mb-0">Com os vencimentos e valores organizados, fica mais simples decidir quais recebíveis antecipar e planejar pagamentos sem depender de controles paralelos.</p>
                           </blockquote>
                           <div class="card-footer d-flex align-items-center border-0 pt-0">
-                            <img src="assets/img/avatar/43.png" width="48" class="rounded-circle ms-n1" alt="Robert Fox">
+                            <img src="assets/img/avatar/43.png" width="48" class="rounded-circle ms-n1" alt="Gestão de caixa">
                             <div class="ps-2 ms-1">
-                              <h6 class="fs-base fw-semibold mb-0">Robert Fox</h6>
-                              <span class="fs-sm text-muted">QA Engineer</span>
+                              <h6 class="fs-base fw-semibold mb-0">Gestão de caixa</h6>
+                              <span class="fs-sm text-muted">Fornecedor</span>
                             </div>
                           </div>
                         </div>
@@ -795,13 +740,13 @@
                               <i class="bx bxs-star text-warning"></i>
                               <i class="bx bx-star text-muted opacity-75"></i>
                             </div>
-                            <p class="fs-lg mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum odio, bibendum ornare mi at, efficitur urna. Sit pretium aliquam tempor, orci dolor sed maecenas.</p>
+                            <p class="fs-lg mb-0">O FinanceHub centraliza a jornada da operação para que o fornecedor entenda elegibilidade, solicitação e conclusão sem perder o contexto do título.</p>
                           </blockquote>
                           <div class="card-footer d-flex align-items-center border-0 pt-0">
-                            <img src="assets/img/avatar/44.png" width="48" class="rounded-circle ms-n1" alt="Annette Black">
+                            <img src="assets/img/avatar/44.png" width="48" class="rounded-circle ms-n1" alt="Contas a receber">
                             <div class="ps-2 ms-1">
-                              <h6 class="fs-base fw-semibold mb-0">Annette Black</h6>
-                              <span class="fs-sm text-muted">Project Manager</span>
+                              <h6 class="fs-base fw-semibold mb-0">Contas a receber</h6>
+                              <span class="fs-sm text-muted">Fornecedor</span>
                             </div>
                           </div>
                         </div>
@@ -823,13 +768,13 @@
                               <i class="bx bxs-star text-warning"></i>
                               <i class="bx bxs-star text-warning"></i>
                             </div>
-                            <p class="fs-lg mb-0">Etiam augue ante, imperdiet et nunc sed, bibendum faucibus est. Suspendisse egestas facilisis erat eu eleifend. Pellentesque finibus congue egestas egestas suspendisse blandit justo.</p>
+                            <p class="fs-lg mb-0">A visão por empresa compradora e por vencimento ajuda a priorizar capital de giro sem transformar a rotina financeira em uma busca manual por informações.</p>
                           </blockquote>
                           <div class="card-footer d-flex align-items-center border-0 pt-0">
-                            <img src="assets/img/avatar/45.png" width="48" class="rounded-circle ms-n1" alt="Jerome Bell">
+                            <img src="assets/img/avatar/45.png" width="48" class="rounded-circle ms-n1" alt="Planejamento operacional">
                             <div class="ps-2 ms-1">
-                              <h6 class="fs-base fw-semibold mb-0">Jerome Bell</h6>
-                              <span class="fs-sm text-muted">Developer</span>
+                              <h6 class="fs-base fw-semibold mb-0">Planejamento operacional</h6>
+                              <span class="fs-sm text-muted">Fornecedor</span>
                             </div>
                           </div>
                         </div>
@@ -845,19 +790,19 @@
 
 
       <!-- FAQ -->
-      <section class="container py-5 mb-lg-2">
+      <section id="faq-section" class="container py-5 mb-lg-2">
         <div class="row py-2 py-md-4 py-lg-5">
           <div class="col-xl-4 col-md-5 text-center text-md-start pt-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
-            <h2 class="pb-3 mb-1 mb-lg-3">Any questions? <br class="d-none d-md-inline">Check out the FAQs</h2>
-            <p class="fs-lg pb-3 mb-2 mb-lg-3">Still have unanswered questions and need to get in touch?</p>
+            <h2 class="pb-3 mb-1 mb-lg-3">Dúvidas sobre risco sacado? <br class="d-none d-md-inline">Veja as respostas principais</h2>
+            <p class="fs-lg pb-3 mb-2 mb-lg-3">Entenda como o FinanceHub apoia fornecedores na antecipação de recebíveis.</p>
             <div class="row row-cols-1 row-cols-sm-2 g-3 g-sm-4">
               <div class="col">
                 <div class="card card-hover">
                   <div class="card-body pb-3">
                     <i class="bx bxs-phone-call d-block fs-2 text-primary mb-2 py-1"></i>
-                    <p class="fs-sm mb-2">Still have  questions?</p>
+                    <p class="fs-sm mb-2">Quer falar com o time?</p>
                     <a href="#" class="btn btn-link stretched-link px-0">
-                      Call us
+                      Agendar conversa
                       <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
                     </a>
                   </div>
@@ -867,9 +812,9 @@
                 <div class="card card-hover">
                   <div class="card-body pb-3">
                     <i class="bx bx-message-rounded-dots d-block fs-2 text-success mb-2 py-1"></i>
-                    <p class="fs-sm mb-2">Still have  questions?</p>
+                    <p class="fs-sm mb-2">Precisa de apoio?</p>
                     <a href="#" class="btn btn-link text-success stretched-link px-0">
-                      Chat with us
+                      Solicitar atendimento
                       <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
                     </a>
                   </div>
@@ -882,78 +827,78 @@
               <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                 <h2 class="accordion-header" id="q1-heading">
                   <button class="accordion-button shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
-                    Is any of my personal information stored in the App?
+                    O que é risco sacado?
                   </button>
                 </h2>
                 <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1-heading" data-bs-parent="#faq">
                   <div class="accordion-body fs-sm pt-0">
-                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    <p>Risco sacado é uma operação em que o fornecedor pode antecipar valores a receber de uma empresa compradora, normalmente usando a relação comercial e o título confirmado como base da operação.</p>
+                    <p class="mb-0">No FinanceHub, o foco é dar visibilidade aos títulos, aos prazos e ao acompanhamento da solicitação para que o fornecedor tome a decisão com mais clareza.</p>
                   </div>
                 </div>
               </div>
               <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                 <h2 class="accordion-header" id="q2-heading">
                   <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
-                    What formats can I download my transaction history in?
+                    Quem pode usar o FinanceHub?
                   </button>
                 </h2>
                 <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2-heading" data-bs-parent="#faq">
                   <div class="accordion-body fs-sm pt-0">
-                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    <p>Por enquanto, a plataforma atende fornecedores que possuem recebíveis vinculados a empresas compradoras participantes da operação.</p>
+                    <p class="mb-0">O acesso permite consultar títulos elegíveis, avaliar oportunidades de antecipação e acompanhar o andamento de cada solicitação.</p>
                   </div>
                 </div>
               </div>
               <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                 <h2 class="accordion-header" id="q3-heading">
                   <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
-                    Can I schedule future transfers?
+                    Como sei quais títulos são elegíveis?
                   </button>
                 </h2>
                 <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3-heading" data-bs-parent="#faq">
                   <div class="accordion-body fs-sm pt-0">
-                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    <p>Os títulos disponíveis aparecem na plataforma com informações de valor, vencimento, empresa compradora e status da operação.</p>
+                    <p class="mb-0">Assim, o fornecedor consegue priorizar os recebíveis que fazem sentido para o caixa antes de iniciar a solicitação.</p>
                   </div>
                 </div>
               </div>
               <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                 <h2 class="accordion-header" id="q4-heading">
                   <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
-                    When can I use Banking App services?
+                    A operação depende da empresa compradora?
                   </button>
                 </h2>
                 <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4-heading" data-bs-parent="#faq">
                   <div class="accordion-body fs-sm pt-0">
-                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    <p>Sim. O risco sacado parte de recebíveis ligados a uma relação comercial com a empresa compradora.</p>
+                    <p class="mb-0">O FinanceHub organiza essa informação para que o fornecedor visualize oportunidades associadas às empresas participantes.</p>
                   </div>
                 </div>
               </div>
               <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                 <h2 class="accordion-header" id="q5-heading">
                   <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
-                    Can I create my own password that is easy for me to remember?
+                    Risco sacado é igual a um empréstimo tradicional?
                   </button>
                 </h2>
                 <div id="q5" class="accordion-collapse collapse" aria-labelledby="q5-heading" data-bs-parent="#faq">
                   <div class="accordion-body fs-sm pt-0">
-                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    <p>Não é apresentado como crédito genérico para qualquer finalidade. A operação está relacionada à antecipação de valores que o fornecedor já tem a receber.</p>
+                    <p class="mb-0">Por isso, a plataforma destaca títulos, prazos e status, ajudando a diferenciar a operação de uma contratação financeira convencional.</p>
                   </div>
                 </div>
               </div>
               <div class="accordion-item border-0 rounded-3 shadow-sm">
                 <h2 class="accordion-header" id="q6-heading">
                   <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
-                    What happens if I forget or lose my password?
+                    Como acompanho a liquidação?
                   </button>
                 </h2>
                 <div id="q6" class="accordion-collapse collapse" aria-labelledby="q6-heading" data-bs-parent="#faq">
                   <div class="accordion-body fs-sm pt-0">
-                    <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    <p>Cada solicitação pode ser acompanhada por status, permitindo que o fornecedor entenda em que ponto a operação está.</p>
+                    <p class="mb-0">Essa visão ajuda a planejar o uso do capital antecipado e acompanhar os próximos passos com mais previsibilidade.</p>
                   </div>
                 </div>
               </div>
@@ -964,24 +909,24 @@
 
 
       <!-- Subscription CTA -->
-      <section class="container">
+      <section id="subscribe" class="container">
         <div class="bg-secondary rounded-3 py-5 px-3 px-sm-4 px-lg-5 px-xl-0">
           <div class="row align-items-center py-lg-4">
             <div class="col-xl-5 col-md-6 offset-xl-1 mb-4 mb-md-0">
               <div class="d-flex align-items-center">
-                <img src="assets/img/landing/app-showcase-1/notification-icon.svg" width="78" alt="Bell icon">
+                <img src="assets/img/landing/app-showcase-1/notification-icon.svg" width="78" alt="Ícone de notificação">
                 <div class="ps-3 ms-sm-3">
-                  <h2 class="h4 mb-0">Subscribe to our newsletter to stay informed about latest updates</h2>
+                  <h2 class="h4 mb-0">Solicite acesso ao FinanceHub e avalie seus títulos elegíveis</h2>
                 </div>
               </div>
             </div>
             <div class="col-xl-5 col-md-6">
               <div class="ps-lg-5 ms-xl-2">
                 <form class="input-group input-group-lg needs-validation" novalidate>
-                  <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+                  <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Seu e-mail corporativo" required>
                   <i class="bx bx-envelope fs-xl text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
-                  <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
-                  <button type="submit" class="btn btn-primary px-sm-4">Subscribe</button>
+                  <div class="invalid-tooltip position-absolute top-100 start-0">Informe um e-mail válido.</div>
+                  <button type="submit" class="btn btn-primary px-sm-4">Solicitar</button>
                 </form>
               </div>
             </div>
@@ -995,25 +940,23 @@
     <footer class="footer pt-5 pb-4 pb-lg-5">
       <div class="container text-center pt-lg-3">
         <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4">
-          <img src="assets/img/logo.svg" class="me-2" width="60" alt="Silicon">
-          <span class="fs-4">Silicon</span>
+          <img src="assets/img/logo/image.png" class="me-2" width="47" alt="FinanceHub">
+          <span class="fs-4">FinanceHub</span>
         </div>
         <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
-          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Overview</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contacts</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
+          <li class="nav-item"><a href="#top" class="nav-link" data-scroll data-scroll-offset="120">Início</a></li>
+          <li class="nav-item"><a href="#features" class="nav-link" data-scroll data-scroll-offset="120">Recursos</a></li>
+          <li class="nav-item"><a href="#how-it-works" class="nav-link" data-scroll data-scroll-offset="120">Como funciona</a></li>
+          <li class="nav-item"><a href="#benefits" class="nav-link" data-scroll data-scroll-offset="120">Benefícios</a></li>
+          <li class="nav-item"><a href="#faq-section" class="nav-link" data-scroll data-scroll-offset="120">FAQ</a></li>
+          <li class="nav-item"><a href="#subscribe" class="nav-link" data-scroll data-scroll-offset="120">Contato</a></li>
         </ul>
         <div class="d-flex flex-column flex-sm-row justify-content-center">
-          <a href="#" class="btn btn-dark btn-lg px-3 py-2 me-sm-4 mb-3">
-            <img src="assets/img/market/appstore-light.svg" class="light-mode-img" width="124" alt="App Store">
-            <img src="assets/img/market/appstore-dark.svg" class="dark-mode-img" width="124" alt="App Store">
+          <a href="#subscribe" class="btn btn-primary btn-lg px-4 py-2 me-sm-4 mb-3" data-scroll data-scroll-offset="120">
+            Solicitar acesso
           </a>
-          <a href="#" class="btn btn-dark btn-lg px-3 py-2 mb-3">
-            <img src="assets/img/market/googleplay-light.svg" class="light-mode-img" width="139" alt="Google Play">
-            <img src="assets/img/market/googleplay-dark.svg" class="dark-mode-img" width="139" alt="Google Play">
+          <a href="#faq-section" class="btn btn-outline-primary btn-lg px-4 py-2 mb-3" data-scroll data-scroll-offset="120">
+            Tirar dúvidas
           </a>
         </div>
         <div class="d-flex justify-content-center pt-4 mt-lg-3">
@@ -1031,8 +974,7 @@
           </a>
         </div>
         <p class="nav d-block fs-sm text-center pt-5 mt-lg-4 mb-0">
-          <span class="opacity-80">&copy; All rights reserved. Made by </span>
-          <a class="nav-link d-inline-block p-0" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a>
+          <span class="opacity-80">&copy; FinanceHub. Todos os direitos reservados.</span>
         </p>
       </div>
     </footer>
@@ -1040,7 +982,7 @@
 
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>
-      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Topo</span>
       <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
     </a>
 
@@ -1048,6 +990,31 @@
     <!-- Vendor Scripts -->
     <script src="assets/vendor/rellax/rellax.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- FinanceHub feature showcase interaction -->
+    <script>
+      (function () {
+        const showcase = document.querySelector('.financehub-feature-showcase');
+        if (!showcase || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        const resetShowcase = function () {
+          showcase.style.setProperty('--fh-shift-x', '0px');
+          showcase.style.setProperty('--fh-shift-y', '0px');
+        };
+
+        showcase.addEventListener('mousemove', function (event) {
+          const rect = showcase.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) - 0.5;
+          const y = ((event.clientY - rect.top) / rect.height) - 0.5;
+
+          showcase.style.setProperty('--fh-shift-x', (x * 10).toFixed(1) + 'px');
+          showcase.style.setProperty('--fh-shift-y', (y * 8).toFixed(1) + 'px');
+        });
+
+        showcase.addEventListener('mouseleave', resetShowcase);
+        showcase.addEventListener('blur', resetShowcase, true);
+      })();
+    </script>
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
