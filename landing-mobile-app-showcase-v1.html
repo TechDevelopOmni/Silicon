@@ -125,9 +125,6 @@
       .financehub-feature-overlay {
         display: block;
         width: 100%;
-        border: 1px solid rgba(180, 183, 201, .32);
-        background-color: #fff;
-        box-shadow: 0 1.75rem 4.5rem rgba(14, 24, 54, .18);
         transition: transform .24s ease-out, box-shadow .24s ease-out;
         will-change: transform;
       }
@@ -136,23 +133,14 @@
       }
       .financehub-feature-overlay {
         position: absolute;
-        top: 21.75%;
+        top:9.75%;
         left: 17.65%;
         z-index: 2;
         width: 82.5%;
-        border-radius: .75rem;
-        box-shadow: 0 1.5rem 3.5rem rgba(14, 24, 54, .24);
         transform: translate3d(var(--fh-shift-x), calc(.45rem + var(--fh-shift-y)), 0);
       }
-      .financehub-feature-showcase:hover .financehub-feature-main,
-      .financehub-feature-showcase:hover .financehub-feature-overlay {
-        box-shadow: 0 2.25rem 5.75rem rgba(14, 24, 54, .24);
-      }
-      [data-bs-theme="dark"] .financehub-feature-main,
-      [data-bs-theme="dark"] .financehub-feature-overlay {
-        border-color: rgba(255, 255, 255, .14);
-        box-shadow: 0 1.25rem 3.5rem rgba(0, 0, 0, .35);
-      }
+   
+    
       @keyframes financehub-showcase-float {
         0%, 100% {
           transform: translate3d(0, 0, 0);
@@ -267,8 +255,8 @@
             <div class="row justify-content-center text-center pt-4 pb-sm-2 py-lg-5">
               <div class="col-xl-8 col-lg-9 col-md-10 py-5">
                 <h1 class="display-4 text-light pt-sm-2 pb-1 pb-sm-3 mb-3">Sua Plataforma Financeira Completa e inteligente</h1>
-                <p class="fs-lg text-light opacity-70 pb-2 pb-sm-0 mb-4 mb-sm-5">We offer you a new generation of task and project management system. Plan, manage and track all your tasks in one flexible software!</p>
-                <a href="#" class="btn btn-primary shadow-primary btn-lg">Get early access</a>
+                <p class="fs-lg text-light opacity-70 pb-2 pb-sm-0 mb-4 mb-sm-5">Controle contas a pagar e receber, acompanhe o caixa, importe notas fiscais e antecipe recebíveis com instituições parceiras em um fluxo seguro, integrado e rastreável.</p>
+                <a href="#" class="btn btn-primary shadow-primary btn-lg">Acessar a Plataforma</a>
               </div>
             </div>
           </div>
@@ -331,21 +319,21 @@
             <!-- Item -->
             <div class="swiper-slide py-3">
               <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/landing/app-showcase-1/screens/image.png" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
+                <img src="assets/img/brands/daytrade.png" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
               </a>
             </div>
 
             <!-- Item -->
             <div class="swiper-slide py-3">
               <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/02.svg" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
+                <img src="assets/img/brands/tempermax.png" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
               </a>
             </div>
 
             <!-- Item -->
             <div class="swiper-slide py-3">
               <a href="#" class="card card-body card-hover px-2 mx-2">
-                <img src="assets/img/brands/03.svg" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
+                <img src="assets/img/brands/dti.png" class="d-block mx-auto my-2" width="154" alt="Empresa parceira">
               </a>
             </div>
 
@@ -384,17 +372,17 @@
           <!-- Parallax gfx -->
           <div class="col-lg-5 d-none d-lg-block">
             <div class="financehub-feature-showcase position-relative">
-              <img src="assets/img/landing/app-showcase-1/features/Frame 1000015943.png" class="financehub-feature-main" alt="Dashboard do FinanceHub">
+              <img src="assets/img/landing/app-showcase-1/screens/ladoa.png" class="financehub-feature-main" alt="Dashboard do FinanceHub">
               <div class="rellax position-absolute top-0 start-0 w-100 h-100" data-rellax-vertical-scroll-axis="x" data-rellax-horizontal-speed="0.75" data-disable-parallax-down="lg">
-                <img src="assets/img/landing/app-showcase-1/features/financehub-summary-cards.png" class="financehub-feature-overlay" alt="Indicadores financeiros do FinanceHub">
+                <img src="assets/img/landing/app-showcase-1/screens/ladob.png" class="financehub-feature-overlay" alt="Indicadores financeiros do FinanceHub">
               </div>
             </div>
           </div>
 
         <!-- Feature list -->
         <div class="col-lg-7">
-          <h2 class="h1 text-center text-md-start mb-4">Risco sacado com clareza para fornecedores</h2>
-          <p class="fs-lg text-muted text-center text-md-start mb-4 mb-xl-5">O FinanceHub organiza títulos a receber de empresas compradoras e mostra quais podem ser antecipados, com informações de prazo, valor e status em um único ambiente.</p>
+          <h2 class="h1 text-center text-md-start mb-4">Principais Soluções</h2>
+          <p class="fs-lg text-muted text-center text-md-start mb-4 mb-xl-5">O FinanceHub centraliza a rotina financeira da empresa, organiza títulos, acompanha vencimentos e conecta oportunidades de Supply Chain Finance em um ambiente seguro, simples e rastreável.</p>
             <div class="row row-cols-1 row-cols-sm-2 pt-2 pt-sm-3 pt-xl-2">
 
               <!-- Item -->
@@ -404,8 +392,8 @@
                     <img src="assets/img/landing/app-showcase-1/features/payments.svg" alt="Icon">
                 </div>
                 <div class="ps-4 ps-sm-3 ps-md-4">
-                  <h3 class="h5 pb-1 mb-2">Títulos elegíveis</h3>
-                  <p class="mb-0">Veja quais recebíveis vinculados a empresas compradoras estão disponíveis para risco sacado.</p>
+                  <h3 class="h5 pb-1 mb-2">Fluxo de Caixa</h3>
+                  <p class="mb-0">Acompanhe entradas, saídas, vencimentos e compromissos financeiros em uma visão clara para tomar decisões com mais previsibilidade.</p>
                 </div>
               </div>
             </div>
@@ -417,8 +405,8 @@
                     <img src="assets/img/landing/app-showcase-1/features/security.svg" alt="Icon">
                 </div>
                 <div class="ps-4 ps-sm-3 ps-md-4">
-                  <h3 class="h5 pb-1 mb-2">Operação segura</h3>
-                  <p class="mb-0">Acompanhe dados sensíveis da operação com acesso controlado e informações bem organizadas.</p>
+                  <h3 class="h5 pb-1 mb-2">Antecipação de Recebíveis</h3>
+                  <p class="mb-0">Identifique títulos elegíveis para antecipação, acompanhe propostas e ganhe liquidez sem perder o controle da operação.</p>
                 </div>
               </div>
             </div>
@@ -430,8 +418,8 @@
                     <img src="assets/img/landing/app-showcase-1/features/statistics.svg" alt="Icon">
                 </div>
                 <div class="ps-4 ps-sm-3 ps-md-4">
-                  <h3 class="h5 pb-1 mb-2">Visão por vencimento</h3>
-                  <p class="mb-0">Entenda prazos, valores e status dos títulos para decidir quando antecipar.</p>
+                  <h3 class="h5 pb-1 mb-2">Sacado</h3>
+                  <p class="mb-0">Gerencie operações de risco sacado com visão por fornecedor, nota fiscal, vencimento, valor e status de cada etapa.</p>
                 </div>
               </div>
             </div>
@@ -443,8 +431,8 @@
                     <img src="assets/img/landing/app-showcase-1/features/support.svg" alt="Icon">
                 </div>
                 <div class="ps-4 ps-sm-3 ps-md-4">
-                  <h3 class="h5 pb-1 mb-2">Acompanhamento de status</h3>
-                  <p class="mb-0">Monitore cada etapa da solicitação, da elegibilidade até a conclusão da operação.</p>
+                  <h3 class="h5 pb-1 mb-2">Cobrança</h3>
+                  <p class="mb-0">Monitore solicitações, aprovações, contatos e retornos em um fluxo organizado, com histórico completo da operação.</p>
                 </div>
               </div>
             </div>
@@ -457,7 +445,7 @@
                 </div>
                 <div class="ps-4 ps-sm-3 ps-md-4">
                   <h3 class="h5 pb-1 mb-2">Previsibilidade de caixa</h3>
-                  <p class="mb-0">Transforme recebíveis futuros em uma visão clara de capital disponível para a operação.</p>
+                  <p class="mb-0">Transforme dados financeiros em visão prática de capital disponível, valores futuros e impacto das decisões no caixa.</p>
                 </div>
               </div>
             </div>
@@ -470,7 +458,7 @@
                 </div>
                 <div class="ps-4 ps-sm-3 ps-md-4">
                   <h3 class="h5 pb-1 mb-2">Suporte operacional</h3>
-                  <p class="mb-0">Conte com apoio para entender a elegibilidade, selecionar títulos e acompanhar a liquidação.</p>
+                  <p class="mb-0">Conte com uma esteira estruturada para analisar elegibilidade, selecionar títulos, registrar decisões e acompanhar a liquidação.</p>
                 </div>
               </div>
             </div>
@@ -797,123 +785,129 @@
       </section>
 
 
-      <!-- FAQ -->
-      <section id="faq-section" class="container py-5 mb-lg-2">
-        <div class="row py-2 py-md-4 py-lg-5">
-          <div class="col-xl-4 col-md-5 text-center text-md-start pt-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
-            <h2 class="pb-3 mb-1 mb-lg-3">Dúvidas sobre risco sacado? <br class="d-none d-md-inline">Veja as respostas principais</h2>
-            <p class="fs-lg pb-3 mb-2 mb-lg-3">Entenda como o FinanceHub apoia fornecedores na antecipação de recebíveis.</p>
-            <div class="row row-cols-1 row-cols-sm-2 g-3 g-sm-4">
-              <div class="col">
-                <div class="card card-hover">
-                  <div class="card-body pb-3">
-                    <i class="bx bxs-phone-call d-block fs-2 text-primary mb-2 py-1"></i>
-                    <p class="fs-sm mb-2">Quer falar com o time?</p>
-                    <a href="#" class="btn btn-link stretched-link px-0">
-                      Agendar conversa
-                      <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card card-hover">
-                  <div class="card-body pb-3">
-                    <i class="bx bx-message-rounded-dots d-block fs-2 text-success mb-2 py-1"></i>
-                    <p class="fs-sm mb-2">Precisa de apoio?</p>
-                    <a href="#" class="btn btn-link text-success stretched-link px-0">
-                      Solicitar atendimento
-                      <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-7 offset-xl-1">
-            <div class="accordion" id="faq">
-              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                <h2 class="accordion-header" id="q1-heading">
-                  <button class="accordion-button shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
-                    O que é risco sacado?
-                  </button>
-                </h2>
-                <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1-heading" data-bs-parent="#faq">
-                  <div class="accordion-body fs-sm pt-0">
-                    <p>Risco sacado é uma operação em que o fornecedor pode antecipar valores a receber de uma empresa compradora, normalmente usando a relação comercial e o título confirmado como base da operação.</p>
-                    <p class="mb-0">No FinanceHub, o foco é dar visibilidade aos títulos, aos prazos e ao acompanhamento da solicitação para que o fornecedor tome a decisão com mais clareza.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                <h2 class="accordion-header" id="q2-heading">
-                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
-                    Quem pode usar o FinanceHub?
-                  </button>
-                </h2>
-                <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2-heading" data-bs-parent="#faq">
-                  <div class="accordion-body fs-sm pt-0">
-                    <p>Por enquanto, a plataforma atende fornecedores que possuem recebíveis vinculados a empresas compradoras participantes da operação.</p>
-                    <p class="mb-0">O acesso permite consultar títulos elegíveis, avaliar oportunidades de antecipação e acompanhar o andamento de cada solicitação.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                <h2 class="accordion-header" id="q3-heading">
-                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
-                    Como sei quais títulos são elegíveis?
-                  </button>
-                </h2>
-                <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3-heading" data-bs-parent="#faq">
-                  <div class="accordion-body fs-sm pt-0">
-                    <p>Os títulos disponíveis aparecem na plataforma com informações de valor, vencimento, empresa compradora e status da operação.</p>
-                    <p class="mb-0">Assim, o fornecedor consegue priorizar os recebíveis que fazem sentido para o caixa antes de iniciar a solicitação.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                <h2 class="accordion-header" id="q4-heading">
-                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
-                    A operação depende da empresa compradora?
-                  </button>
-                </h2>
-                <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4-heading" data-bs-parent="#faq">
-                  <div class="accordion-body fs-sm pt-0">
-                    <p>Sim. O risco sacado parte de recebíveis ligados a uma relação comercial com a empresa compradora.</p>
-                    <p class="mb-0">O FinanceHub organiza essa informação para que o fornecedor visualize oportunidades associadas às empresas participantes.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                <h2 class="accordion-header" id="q5-heading">
-                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
-                    Risco sacado é igual a um empréstimo tradicional?
-                  </button>
-                </h2>
-                <div id="q5" class="accordion-collapse collapse" aria-labelledby="q5-heading" data-bs-parent="#faq">
-                  <div class="accordion-body fs-sm pt-0">
-                    <p>Não é apresentado como crédito genérico para qualquer finalidade. A operação está relacionada à antecipação de valores que o fornecedor já tem a receber.</p>
-                    <p class="mb-0">Por isso, a plataforma destaca títulos, prazos e status, ajudando a diferenciar a operação de uma contratação financeira convencional.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item border-0 rounded-3 shadow-sm">
-                <h2 class="accordion-header" id="q6-heading">
-                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
-                    Como acompanho a liquidação?
-                  </button>
-                </h2>
-                <div id="q6" class="accordion-collapse collapse" aria-labelledby="q6-heading" data-bs-parent="#faq">
-                  <div class="accordion-body fs-sm pt-0">
-                    <p>Cada solicitação pode ser acompanhada por status, permitindo que o fornecedor entenda em que ponto a operação está.</p>
-                    <p class="mb-0">Essa visão ajuda a planejar o uso do capital antecipado e acompanhar os próximos passos com mais previsibilidade.</p>
-                  </div>
-                </div>
-              </div>
+    <!-- FAQ -->
+<section id="faq-section" class="container py-5 mb-lg-2">
+  <div class="row py-2 py-md-4 py-lg-5">
+    <div class="col-xl-4 col-md-5 text-center text-md-start pt-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
+      <h2 class="pb-3 mb-1 mb-lg-3">Dúvidas sobre o FinanceHub? <br class="d-none d-md-inline">Veja como a plataforma funciona</h2>
+      <p class="fs-lg pb-3 mb-2 mb-lg-3">Entenda como o FinanceHub conecta gestão financeira, recebíveis, Supply Chain Finance e acompanhamento operacional em um único ambiente.</p>
+      <div class="row row-cols-1 row-cols-sm-2 g-3 g-sm-4">
+        <div class="col">
+          <div class="card card-hover">
+            <div class="card-body pb-3">
+              <i class="bx bxs-phone-call d-block fs-2 text-primary mb-2 py-1"></i>
+              <p class="fs-sm mb-2">Quer entender na prática?</p>
+              <a href="#" class="btn btn-link stretched-link px-0">
+                Agendar conversa
+                <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+              </a>
             </div>
           </div>
         </div>
-      </section>
+        <div class="col">
+          <div class="card card-hover">
+            <div class="card-body pb-3">
+              <i class="bx bx-message-rounded-dots d-block fs-2 text-success mb-2 py-1"></i>
+              <p class="fs-sm mb-2">Precisa de orientação?</p>
+              <a href="#" class="btn btn-link text-success stretched-link px-0">
+                Solicitar atendimento
+                <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7 offset-xl-1">
+      <div class="accordion" id="faq">
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h2 class="accordion-header" id="q1-heading">
+            <button class="accordion-button shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+              O que é o FinanceHub?
+            </button>
+          </h2>
+          <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1-heading" data-bs-parent="#faq">
+            <div class="accordion-body fs-sm pt-0">
+              <p>O FinanceHub é uma plataforma financeira para empresas que precisam organizar títulos, acompanhar vencimentos, controlar contas a pagar e receber e visualizar oportunidades de liquidez.</p>
+              <p class="mb-0">A plataforma centraliza informações financeiras e operacionais para que a empresa tome decisões com mais clareza, segurança e rastreabilidade.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h2 class="accordion-header" id="q2-heading">
+            <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+              Como o FinanceHub ajuda no fluxo de caixa?
+            </button>
+          </h2>
+          <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2-heading" data-bs-parent="#faq">
+            <div class="accordion-body fs-sm pt-0">
+              <p>O FinanceHub organiza entradas, saídas, vencimentos e compromissos financeiros em uma visão prática para acompanhamento diário.</p>
+              <p class="mb-0">Com isso, a empresa consegue antecipar decisões, identificar necessidades de caixa e acompanhar o impacto financeiro de cada operação.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h2 class="accordion-header" id="q3-heading">
+            <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+              O que é Supply Chain Finance dentro da plataforma?
+            </button>
+          </h2>
+          <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3-heading" data-bs-parent="#faq">
+            <div class="accordion-body fs-sm pt-0">
+              <p>É o fluxo que permite conectar títulos financeiros a oportunidades de antecipação, risco sacado ou análise por securitizadoras parceiras.</p>
+              <p class="mb-0">A empresa acompanha os títulos elegíveis, envia solicitações, recebe retornos, avalia propostas e mantém histórico completo da operação.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h2 class="accordion-header" id="q4-heading">
+            <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+              Como sei quais títulos podem ser antecipados?
+            </button>
+          </h2>
+          <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4-heading" data-bs-parent="#faq">
+            <div class="accordion-body fs-sm pt-0">
+              <p>A plataforma apresenta os títulos com informações de vencimento, valor, parceiro, nota fiscal, status e elegibilidade.</p>
+              <p class="mb-0">Assim, o usuário consegue identificar rapidamente quais recebíveis fazem sentido para análise e quais ainda precisam de validação.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h2 class="accordion-header" id="q5-heading">
+            <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+              A operação fica registrada no histórico?
+            </button>
+          </h2>
+          <div id="q5" class="accordion-collapse collapse" aria-labelledby="q5-heading" data-bs-parent="#faq">
+            <div class="accordion-body fs-sm pt-0">
+              <p>Sim. O FinanceHub registra decisões, mensagens, retornos, status e etapas importantes da operação.</p>
+              <p class="mb-0">Esse histórico ajuda a manter governança, facilita auditoria e permite acompanhar o que aconteceu em cada título ou solicitação.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item border-0 rounded-3 shadow-sm">
+          <h2 class="accordion-header" id="q6-heading">
+            <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+              Quem participa do fluxo de antecipação?
+            </button>
+          </h2>
+          <div id="q6" class="accordion-collapse collapse" aria-labelledby="q6-heading" data-bs-parent="#faq">
+            <div class="accordion-body fs-sm pt-0">
+              <p>O fluxo pode envolver a empresa solicitante, a securitizadora e o fornecedor ou cliente relacionado aos títulos.</p>
+              <p class="mb-0">Cada participante atua em uma etapa específica, com permissões e informações adequadas ao seu papel dentro da operação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
       <!-- Subscription CTA -->
@@ -924,7 +918,7 @@
               <div class="d-flex align-items-center">
                 <img src="assets/img/landing/app-showcase-1/notification-icon.svg" width="78" alt="Ícone de notificação">
                 <div class="ps-3 ms-sm-3">
-                  <h2 class="h4 mb-0">Solicite acesso ao FinanceHub e avalie seus títulos elegíveis</h2>
+                  <h2 class="h4 mb-0">Gostaria de ser parceiro da plataforma? Envie uma solicitação!!</h2>
                 </div>
               </div>
             </div>
